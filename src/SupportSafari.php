@@ -5,7 +5,7 @@ namespace Appstract\DuskSafari;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\ProcessBuilder;
 
-trait SupportsSafari
+trait SupportSafari
 {
     /**
      * The SafariDriver process instance.
@@ -54,7 +54,7 @@ trait SupportsSafari
     }
 
     /**
-     * Disable logging for safari
+     * Disable logging for safari.
      */
     protected function storeConsoleLogsFor($browsers)
     {
