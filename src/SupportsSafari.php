@@ -5,7 +5,7 @@ namespace Appstract\DuskSafari;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\ProcessBuilder;
 
-trait SupportSafari
+trait SupportsSafari
 {
     /**
      * The SafariDriver process instance.
