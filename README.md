@@ -1,9 +1,9 @@
 # Run Dusk tests on Safari
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/appstract/laravel-dusk-safari.svg?style=flat-square)](https://packagist.org/packages/appstract/:package_name)
-[![Total Downloads](https://img.shields.io/packagist/dt/appstract/laravel-dusk-safari.svg?style=flat-square)](https://packagist.org/packages/appstract/:package_name)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/appstract/laravel-dusk-safari.svg?style=flat-square)](https://packagist.org/packages/appstract/laravel-dusk-safari)
+[![Total Downloads](https://img.shields.io/packagist/dt/appstract/laravel-dusk-safari.svg?style=flat-square)](https://packagist.org/packages/appstract/laravel-dusk-safari)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/appstract/laravel-dusk-safari/master.svg?style=flat-square)](https://travis-ci.org/appstract/:package_name)
+[![Build Status](https://img.shields.io/travis/appstract/laravel-dusk-safari/master.svg?style=flat-square)](https://travis-ci.org/appstract/laravel-dusk-safari)
 
 This package allows you to use the built-in Safari WebDriver of macOS, so you don't need Selenium to run Dusk tests in Safari.
 
@@ -23,7 +23,34 @@ Make sure to enable Remote Automation in the Safari menu bar:
 
 ```Develop > Allow Remote Automation.```
 
-...
+Add the ``SupportsSafari`` trait to your DuskTestCase:
+```php
+use Appstract\DuskSafari\SupportsSafari;
+
+abstract class DuskTestCase extends BaseTestCase
+{
+    use CreatesApplication, SupportsSafari;
+```
+
+Now you can start the server in the ```prepare``` method:
+```php
+public static function prepare()
+{
+    static::startSafariDriver();
+}
+```
+
+Instruct Dusk to use Safari by changing ```DesiredCapabilities::chrome()```
+to ```DesiredCapabilities::safari()``` in the Driver method:
+
+```php
+protected function driver()
+{
+    return RemoteWebDriver::create(
+        'http://localhost:9515', DesiredCapabilities::safari()
+    );
+}
+```
 
 ## Contributing
 
