@@ -1,4 +1,4 @@
-# Run Dusk tests on Safari
+# Run Dusk tests in Safari
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/appstract/laravel-dusk-safari.svg?style=flat-square)](https://packagist.org/packages/appstract/laravel-dusk-safari)
 [![Total Downloads](https://img.shields.io/packagist/dt/appstract/laravel-dusk-safari.svg?style=flat-square)](https://packagist.org/packages/appstract/laravel-dusk-safari)
