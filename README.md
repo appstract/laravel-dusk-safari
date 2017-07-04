@@ -25,7 +25,7 @@ Make sure to enable Remote Automation in the Safari menu bar:
 
 Add the ``SupportsSafari`` trait to your DuskTestCase:
 ```php
-use Appstract\DuskSafari\SupportsSafari;
+use  Appstract\DuskDrivers\Safari\SupportsSafari;
 
 abstract class DuskTestCase extends BaseTestCase
 {

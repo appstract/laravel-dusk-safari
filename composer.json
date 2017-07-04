@@ -23,12 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Appstract\\DuskSafari\\": "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Appstract\\DuskSafari\\Test\\": "tests"
+            "Appstract\\DuskDrivers\\Safari\\": "src"
         }
     },
     "config": {
