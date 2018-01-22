@@ -30,6 +30,7 @@ use  Appstract\DuskDrivers\Safari\SupportsSafari;
 abstract class DuskTestCase extends BaseTestCase
 {
     use CreatesApplication, SupportsSafari;
+}
 ```
 
 Now you can start the server in the ```prepare``` method:
