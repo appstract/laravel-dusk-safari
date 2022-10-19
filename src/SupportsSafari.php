@@ -3,7 +3,6 @@
 namespace Appstract\DuskDrivers\Safari;
 
 use Symfony\Component\Process\Process;
-use Symfony\Component\Process\ProcessBuilder;
 
 trait SupportsSafari
 {
