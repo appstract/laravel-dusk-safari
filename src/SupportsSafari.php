@@ -47,10 +47,7 @@ trait SupportsSafari
      */
     protected static function buildSafariProcess()
     {
-        return (new ProcessBuilder())
-            ->setPrefix('/usr/bin/safaridriver')
-            ->add('-p 9515')
-            ->getProcess();
+        return new Process(['/usr/bin/safaridriver','-p 9515']);
     }
 
     /**
