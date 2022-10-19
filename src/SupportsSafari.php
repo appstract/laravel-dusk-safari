@@ -3,7 +3,6 @@
 namespace Appstract\DuskDrivers\Safari;
 
 use Symfony\Component\Process\Process;
-use Symfony\Component\Process\ProcessBuilder;
 
 trait SupportsSafari
 {
@@ -47,10 +46,7 @@ trait SupportsSafari
      */
     protected static function buildSafariProcess()
     {
-        return (new ProcessBuilder())
-            ->setPrefix('/usr/bin/safaridriver')
-            ->add('-p 9515')
-            ->getProcess();
+        return new Process(['/usr/bin/safaridriver','-p 9515']);
     }
 
     /**
